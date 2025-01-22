@@ -15,6 +15,7 @@ app.use(express.json())
 
 //connect routs
 app.use('/list', require('./routes/api/list'))
+console.log('test')
 
 mongoose.connection.once('open', () => {
   console.log('Connected to MongoDB')
