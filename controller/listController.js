@@ -1,7 +1,8 @@
+const moment = require('moment')
 const List = require('../model/List')
 const { format } = require('date-fns')
 
-const dateTime = `${format(new Date(), 'yyyyMMddHHmmss')}`
+const dateTime = moment().local().format('YYYY-MM-DDTHH:mm:ss.SSS[Z]')
 const listName = `list_${format(new Date(), 'yyyyMMMd').toUpperCase()}`
 
 const createList = async (req, res) => {
