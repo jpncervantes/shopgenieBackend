@@ -21,7 +21,11 @@ const listSchema = new Schema({
         required: true
       }
     }
-  ]
+  ],
+  totalAmount: {
+    type: Number,
+    required: true
+  }
 })
 
 module.exports = mongoose.model('List', listSchema)
